@@ -13,8 +13,7 @@ TBA!
 
 {% include aligner.html images="2020-09-24-ARIMA-model-10_2.png" %}
 
-{% include aligner.html images="pexels/arima2.png,arima3.png" column = 2 %}
-
+{% include aligner.html images="pexels/book-glass.jpeg,triangle.png" %}
 
 {% include aligner.html images="2020-09-24-ARIMA-model_12_1.png" %}
 
