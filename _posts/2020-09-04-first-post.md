@@ -5,7 +5,6 @@ feature-img: "assets/img/pexels/desk-messy.jpeg"
 thumbnail: "assets/thumbnails/pexels/desk-messy.jpeg"
 tags: [beginning]
 author: joey99
-excerpt_separator: <!--more-->
 ---
 
 Hopefully you will find enough information about how to set images in your blog here.
