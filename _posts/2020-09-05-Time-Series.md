@@ -8,7 +8,7 @@ author: joey99
 excerpt_separator: <!--more-->
 ---
 
-<p> When we analyze time series statistically, an autoregressive integrated moving average(model) can be used for the better understanding of the data. </p>
+<p> When we analyze time series statistically, an autoregressive integrated moving average model (ARIMA) can be used for the better understanding of the data. </p>
 <p> ARIMA model is also widely utilized to predict future values of the series by training forecast model. Today, we are going to understand and utilize the concept of ARIMA model in order to find out the mean velocity of individual public bikes across one month time period.</p>  
 <!--more-->
 
@@ -16,8 +16,7 @@ excerpt_separator: <!--more-->
 * TOC
 {:toc}
 
-데이터전처리 단계를 통해 결측치를 처리하고 분석이 가능한 상태로 데이터를 변모시킨다. 자전거의 이용거리와 이용시간을 나누어 평균 이동속도를 산출하고, 자전거번호만을 입력해 원하는 자료를 찾을 수 있도록 앞의 영어를 없애 간단화했으며 대여일시 피처를 시계열 피처로 변환한 다음, 인덱스로 지정한다.
-이전의 값이 이후의 값에 영향을 미치는 정도인 AR(p) 모형이 2차시이고, RV의 평균값이 지속적으로 증가하거나 감소하는 추세인 MA(r) 모형이 2차시이고, 1차 차분이 완료되어 있는 파라미터인 ARIMA(2,1,2) Autogressive Integrated Moving Average 모델을 2020년도 1월 1일부터 2월 12일 까지의 따릉이 대여이력을 중심으로 학습한다.
+Through the preprocessing stage, we process messy original data to the perfect data we can analyze with proper models.
 
 {% highlight ruby %}
 {% raw %}
@@ -27,6 +26,10 @@ excerpt_separator: <!--more-->
 {% endraw %}
 {% endhighlight %}
 
+![model.head]({{ "/assets/img/2020-09-24-ARIMA-model-head(5).PNG" | relative_url }})
+
+First, calculate the average velocity by dividing distance with used time. Next, the information at the first row is not that friendly. simplify it by removing the str value of bike's number. Finally, after converting time feature to a time series and indexification, we can conclude preprocessing step and move over to the analysis process.
+
 {% highlight ruby %}
 {% raw %}
 {% bike['Average Velocity (meters/minutes)'] = bike['이용거리'] / bike['이용시간'] %}
@@ -35,10 +38,10 @@ excerpt_separator: <!--more-->
 {% endraw %}
 {% endhighlight %}
 
-![model.head]({{ "/assets/img/2020-09-24-ARIMA-model-head(5).PNG" | relative_url }})
 
 ## Time-series analysis
 Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 결과와 실제 데이터를 비교한 그래프와 잔차의 변동을 시각화한 그래프를 첨부하였다.
+이전의 값이 이후의 값에 영향을 미치는 정도인 AR(p) 모형이 2차시이고, RV의 평균값이 지속적으로 증가하거나 감소하는 추세인 MA(r) 모형이 2차시이고, 1차 차분이 완료되어 있는 파라미터인 ARIMA(2,1,2) Autogressive Integrated Moving Average 모델을 2020년도 1월 1일부터 2월 12일 까지의 따릉이 대여이력을 중심으로 학습한다
 
 {% highlight ruby %}
 {% raw %}
