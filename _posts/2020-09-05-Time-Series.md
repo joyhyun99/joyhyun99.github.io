@@ -1,23 +1,21 @@
 ---
 layout: post
 title: Applications of Time Series analysis from public bike usage records
-feature-img: "assets/img/bike.jpg"
+feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: "assets/img/bike.jpg"
 tags: [beginning]
 author: joey99
 excerpt_separator: <!--more-->
 ---
-TBA!
+이전의 값이 이후의 값에 영향을 미치는 정도인 AR(p) 모형이 2차시이고, RV의 평균값이 지속적으로 증가하거나 감소하는 추세인 MA(r) 모형이 2차시이고, 1차 차분이 완료되어 있는 파라미터인 ARIMA(2,1,2) Autogressive Integrated Moving Average 모델을 2020년도 1월 1일부터 2월 12일 까지의 따릉이 대여이력을 중심으로 학습한다.
 
 <!--more-->
 
-{% include aligner.html images="2020-09-24-ARIMA-model-10_2.png" %}
+## Preprocessing <!--more-->
+* TOC
+{:toc}
 
-{% include aligner.html images="pexels/book-glass.jpeg,triangle.png" %}
-
-{% include aligner.html images="2020-09-24-ARIMA-model_12_1.png" %}
-
-<p> "2020년도 1월 1일부터 2월 12일 까지의 따릉이 대여이력을 중심으로 구축" </p>
+데이터전처리 단계를 통해 결측치를 처리하고 분석이 가능한 상태로 데이터를 변모시킨다. 자전거의 이용거리와 이용시간을 나누어 평균 이동속도를 산출하고, 자전거번호만을 입력해 원하는 자료를 찾을 수 있도록 앞의 영어를 없애 간단화했으며 대여일시 피처를 시계열 피처로 변환한 다음, 인덱스로 지정한다.
 
 {% highlight ruby %}
 {% raw %}
@@ -37,6 +35,9 @@ TBA!
 
 ![model.head]({{ "/assets/img/2020-09-24-ARIMA-model-head(5).PNG" | relative_url }})
 
+## Time-series analysis
+Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 결과와 실제 데이터를 비교한 그래프와 잔차의 변동을 시각화한 그래프를 첨부하였다.
+
 {% highlight ruby %}
 {% raw %}
 {% print("%d num bike's average velocity is %.2f (m/m)" %(int(bike_number), bike_train_speed)) %}
@@ -46,7 +47,10 @@ TBA!
 {% endraw %}
 {% endhighlight %}
 
-![model.result]({{ "/assets/img/2020-09-24-ARIMA-model-result.PNG" | relative_url }})
+{% include aligner.html images="2020-09-24-ARIMA-model-10_2.png" %}
+
+## Time-series regression + prediction
+학습 데이터를 통해 학습한 모델이 예측한 예측 데이터를 산출하고, 좀 전에 따로 구비해두었던 테스트 데이터와 상호비교하여 모델의 정확성을 확인하였다. 이로써 시계열데이터를 변수로 넣으면 자전거의 평균속도가 산출되는 ARIMA 모델이 학습되었고, 데이터의 시간을 벗어난 다른 시간대의 자전거의 평균속도를 구할 수 있게 되었다. 그래프는 모델이 예상한 최소, 최대, 그리고 평균 속도 그래프와 테스트 데이터를 시각적으로 비교하였고 마지막으로 추정 값 혹은 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룬 평균 제곱근 편차의 값을 산출하여 모델의 정확성을 측정하였다.
 
 {% highlight ruby %}
 {% raw %}
@@ -57,6 +61,9 @@ TBA!
 {% endraw %}
 {% endhighlight %}
 
+![model.result]({{ "/assets/img/2020-09-24-ARIMA-model-result.PNG" | relative_url }})
+![model.graph]({{ "/assets/img/arima2.png.PNG" | relative_url }})
+
 {% highlight ruby %}
 {% raw %}
 {% fore = model_fit.forecast(steps=20) %}
@@ -65,3 +72,5 @@ TBA!
 {% model's rmse is 55.91. %}
 {% endraw %}
 {% endhighlight %}
+
+{% include aligner.html images="2020-09-24-ARIMA-model_12_1.png" %}
