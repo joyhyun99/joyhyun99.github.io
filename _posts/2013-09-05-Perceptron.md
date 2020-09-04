@@ -12,40 +12,22 @@ excerpt_separator: <!--more-->
 <p> ARIMA model is also widely utilized to predict future values of the series by training forecast model. Today, we are going to understand and utilize the concept of ARIMA model in order to find out the mean velocity of individual public bikes across one month time period.</p>  
 <!--more-->
 
-퍼셉트론 규칙에서 로젠블라트는 자동으로 최적의 가중치를 학습하는 알고리즘을 제안했습니다.
+최초의 인공지능 알고리즘이 나오기 전, Dr. W.S. McCulloch와 Dr. Walter Pitts는 생물학적 뇌가 동작하는 방식을 이해하려는 시도로
+뇌의 신경 세포를 이진 출력을 내는 간단한 논리 회로로 표현한 MCP 뉴런을 창안해내었다.
+이의 원리는 간단하나. 신경세포가 정보를 받아들이는 수상 돌기에 여러 신호가 도착하면, 그 정보들이 세포체에서 합쳐지게 되는데,
+이 합쳐진 신호가 특정 임계값을 넘으면 다음 신경세포로 정보를 전달하고 그러지 않으면 전달하지 않는다.
+MCP 뉴런은 정보를 전달했을 때 1, 정보를 전달하지 않았을 때 -1을 설정한 간단한 이진 출력 모델이다.
+
+최초의 인공지능 알고리즘인 퍼셉트론도 이와 크게 다르지 않다.
+퍼셉트론은 기계가 주어진 데이터를 가지고 자동으로 양성 클래스 1, 그리고 음성 클래스 -1 두 개의 클래스로 분류하는 이진 분류 작업이다.
+이진 분류 작업을 수행하기 위해 퍼셉트론 알고리즘은 최적의 가중치 ω를 학습하고,
+이 가중치는 뉴런의 출력 신호를 낼지 말지를 결정하기 위해 입력 특성에 곱하는 계수이다.
+
+최적의 가중치 ω를 학습하는 알고리즘으로,
 이 가중치는 뉴런의 출력 신호를 낼지 말지를 결정하기 위해 입력 특성에 곱하는 계수입니다.
 퍼셉트론은 인공 뉴런 아이디어를 두 개의 클래스가 있는 이진 분류 작업으로 볼 수 있다.
 두 클래스는 간단하게 1(양성 클래스)과 -1(음성 클래스)로 나타낸다
 
-eta = float 학습률 (0.0과 1.0 사이)
-n_iter = 훈련 데이터셋 반복 횟수
-random_state = 가중치 무작위 초기화를 위한 난수 생성기 시드
-w_ = 학습된 가중치
-errors_ = 에포크마다 누적된 분류 오류
-
-매개변수
-        ----------
-        X : {array-like}, shape = [n_samples, n_features]
-          n_samples개의 샘플과 n_features개의 특성으로 이루어진 훈련 데이터
-        y : array-like, shape = [n_samples]
-          타깃값
-
-        반환값
-        -------
-        self : object
-        
- errors = 0
-            for xi, target in zip(X, y):
-                update = self.eta * (target - self.predict(xi))
-                self.w_[1:] += update * xi
-                self.w_[0] += update
-                errors += int(update != 0.0)
-            self.errors_.append(errors)
-            
- return np.dot(X, self.w_[1:]) + self.w_[0]
- 
- return np.where(self.net_input(X) >= 0.0, 1, -1)
- 
  학습률 eta와 에포크 횟수(훈련 데이터를 반복하는 횟수) n_iter로 새로운 Perceptron 객체를 초기화한다
  fit 메서드에서 self.w_ 가중치를 벡터 Rm+1로 초기화한다
  여기서 m은 데이터셋에 있는 차원 개수이다
