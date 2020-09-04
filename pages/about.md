@@ -21,7 +21,6 @@ tags: [About, Archive]
 * TOC
 {:toc}
 
-<br><br>
 
 <p>Greetings! Thank you for your warm visitation.</p>
 
@@ -39,9 +38,7 @@ tags: [About, Archive]
 
 <p>Have a nice day and most importantly, have fun :D</p>
 
-<br><br>
 ---------------------------
-
 
 ## My field of programming languages
 
@@ -75,6 +72,7 @@ tags: [About, Archive]
     <p> Graduated Seoul High school </p>
 </div>
 
+<br><br><br><br><br>
 
 <div id="jb-sidebar">
     <p>2019.12 ~ 2020.1</p>
