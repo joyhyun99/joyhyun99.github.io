@@ -40,8 +40,11 @@ First, calculate the average velocity by dividing distance with used time. Next,
 
 
 ## Time-series analysis
-Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 결과와 실제 데이터를 비교한 그래프와 잔차의 변동을 시각화한 그래프를 첨부하였다.
-이전의 값이 이후의 값에 영향을 미치는 정도인 AR(p) 모형이 2차시이고, RV의 평균값이 지속적으로 증가하거나 감소하는 추세인 MA(r) 모형이 2차시이고, 1차 차분이 완료되어 있는 파라미터인 ARIMA(2,1,2) Autogressive Integrated Moving Average 모델을 2020년도 1월 1일부터 2월 12일 까지의 따릉이 대여이력을 중심으로 학습한다
+<p> When given a time series data X with an real number index, ARIMA models can be denoted to ARIMA(p,q,r) where p is the order of the autoregressive model and AR(p) is the extent to which the previous value affects the subsequent values. r is the order of the moving average model and Ma(r) is a trend in which the mean value of Random variables increases or decreases continuously. q is the degree of differencing. </p>
+
+<p> Consider the public bike model follows ARIMA(2,1,2) model. Train the data and evaluate the result both visually using graph and mathematically using the rmse value. </p>
+
+$$ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt $$ 
 
 {% highlight ruby %}
 {% raw %}
@@ -80,7 +83,5 @@ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 �
 {% endhighlight %}
 
 {% include aligner.html images="2020-09-24-ARIMA-model_12_1.png" %}
-
-모델이 20일 후 예측한 값.
 
 {% include aligner.html images="arima4.png" %}
