@@ -80,4 +80,9 @@ tags: [About, Archive]
     <p>J Freshman first semester scholarship for academic excellence</p>
 </div>
 
+## Contact me
+
+<p>Via E-mail: cuihyun12@naver.com</p>
+<p>Via instagram: joyhyun99</p>
+<p>Via KakaoTalk: https://open.kakao.com/o/sLmPPquc</p>
 
