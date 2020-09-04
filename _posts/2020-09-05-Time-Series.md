@@ -58,7 +58,7 @@ $$ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt $$
 {% include aligner.html images="2020-09-24-ARIMA-model-10_2.png" %}
 
 ## Time-series prediction
-학습 데이터를 통해 학습한 모델이 예측한 예측 데이터를 산출하고, 좀 전에 따로 구비해두었던 테스트 데이터와 상호비교하여 모델의 정확성을 확인하였다. 이로써 시계열데이터를 변수로 넣으면 자전거의 평균속도가 산출되는 ARIMA 모델이 학습되었고, 데이터의 시간을 벗어난 다른 시간대의 자전거의 평균속도를 구할 수 있게 되었다. 그래프는 모델이 예상한 최소, 최대, 그리고 평균 속도 그래프와 테스트 데이터를 시각적으로 비교하였고 마지막으로 추정 값 혹은 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룬 평균 제곱근 편차의 값을 산출하여 모델의 정확성을 측정하였다.
+ARIMA model can predict future events by using a generalization of the method of autoregressive forecasting. Calculate the predicted data of the model using the train data, and evaluate it with test datas seperated beforehand. So at last, the ARIMA model is trained to calculate the average speed of bike regardless of time period, and by inserting the time series data into variables, the velocity value beyond the time period of the data can be obtained.
 
 {% highlight ruby %}
 {% raw %}
@@ -72,6 +72,8 @@ $$ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt $$
 ![model.result]({{ "/assets/img/2020-09-24-ARIMA-model-result.PNG" | relative_url }})
 
 ![model.graph]({{ "/assets/img/arima2.png" | relative_url }})
+
+The graph below visually compares the minimum, maximum, and average expected velocity values calculated by the model with the test data. Finally, measure the accuracy of the model by calculating the value of the mean square root deviation that covers the difference between the estimated value with the value that the model predicted.
 
 {% highlight ruby %}
 {% raw %}
