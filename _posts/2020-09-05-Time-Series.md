@@ -36,7 +36,7 @@ TBA!
 {% endraw %}
 {% endhighlight %}
 
-{% include aligner.html images="2020-09-24-ARIMA-model-head(5).PNG" %}
+"/assets/img/2020-09-24-ARIMA-model-head(5).PNG"
 
 {% highlight ruby %}
 {% raw %}
@@ -47,7 +47,7 @@ TBA!
 {% endraw %}
 {% endhighlight %}
 
-{% include aligner.html images="2020-09-24-ARIMA-model-result.PNG" %}
+"/assets/img/2020-09-24-ARIMA-model-result.PNG"
 
 {% highlight ruby %}
 {% raw %}
