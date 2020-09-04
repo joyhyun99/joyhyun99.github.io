@@ -77,9 +77,7 @@ tags: [About, Archive]
     <p> Graduated Seoul High school </p>
 </div>
 
-## Projects
-
-<br><br><br><br><br>
+## History
 
 <div id="jb-sidebar">
     <p>2019.12 ~ 2020.1</p>
