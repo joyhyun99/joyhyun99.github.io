@@ -17,6 +17,9 @@ tags: [About, Archive]
 }
 </style>
 
+# Using Kramdown GFM <!--more-->
+* TOC
+{:toc}
 
 <center>
 
@@ -31,6 +34,7 @@ tags: [About, Archive]
 </center>
 
 ---------------------------
+## Basic Usage
 
 <h3>1. Skills</h3>
 
@@ -40,6 +44,7 @@ tags: [About, Archive]
 
  <p class="text"> * ETC : GitLab, Mac OS</p>
 
+# Using toc.js
 
 <br>
 <h3>2. Interest</h3>
@@ -48,6 +53,8 @@ tags: [About, Archive]
    <p class="text"> Data Mining, Machine Learning, Deep Learning, NLP </p>
 
 <br>
+
+## Customize with toc.js
 
 <h3>3. Experience</h3>
 
@@ -63,6 +70,8 @@ tags: [About, Archive]
 
 <br><br><br><br><br>
 
+### Use with this jekyll template
+
 <h3>4. Project</h3>
 <div id="jb-sidebar">
 	<p>2017.01 ~ 2017.12</p>
@@ -75,6 +84,8 @@ tags: [About, Archive]
     <br><br><br><br><br><br>
     <p>2015.09 ~ 2015.12</p>
 </div>
+
+## Basic Usage
 
 <div id="jb-content">
     <p>산학연 중기청 과제 참여<br>
@@ -99,4 +110,4 @@ tags: [About, Archive]
     <p>JAVA프로그래밍(수업) 프로젝트<br>
     * 자바 어플리케이션 다마고치 게임 제작</p>
 </div>
- 
+
