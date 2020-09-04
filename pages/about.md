@@ -64,28 +64,20 @@ tags: [About, Archive]
 	<p> 2020.3 ~ </p>
 	<p> 2019.3 ~ 2020.3</p>
     <p>2018.3</p>
-</div>
-
-<div id="jb-content">
-    <p> Sophomore year at Yonsei University </p>		
-    <p> Freshman year at Yonsei University </p>
-    <p> Graduated Seoul High school </p>
-</div>
-
-<br><br><br>
-
-<div id="jb-sidebar">
     <p>2019.12 ~ 2020.1</p>
     <p>2019.08 ~ 2019.12</p>
     <p>2019.03 ~ 2019.11</p>
     <p>2019.03 ~ 2019.06</p>
 </div>
 
-
 <div id="jb-content">
+    <p> Sophomore year at Yonsei University </p>		
+    <p> Freshman year at Yonsei University </p>
+    <p> Graduated Seoul High school </p>
     <p> Won a Social Impact Championship as a developer</p>
     <p> Freshman second semester scholarship for academic excellence</p>
     <p> Won a fourth place at Yonsei-Nexon Creative Platform 2019</p>
     <p>J Freshman first semester scholarship for academic excellence</p>
 </div>
+
 
