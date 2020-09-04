@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The Rise of Machine Learning: Perceptron Learning Algorithm and its fallacies
+title: Applications of Time Series analysis from public bike usage records
 feature-img: assets/img/pexels/triangular.jpeg
-thumbnail: assets/img/perceptron_image.jpg
-tags: [data science]
+thumbnail: "assets/img/bike.jpg"
+tags: [data-science, time-series, ARIMA, personal-review]
 author: joey99
 excerpt_separator: <!--more-->
 ---
