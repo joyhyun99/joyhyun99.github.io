@@ -22,7 +22,7 @@ Through the preprocessing stage, we process messy original data to the perfect d
 {% raw %}
 {% bike = pd.read_csv('공공자전거 대여이력 정보_2020.01_056.csv', sep = ',')" %}
 {% print(bike.shape) -> (1048575, 11) %}
-{% print(bike.shape) -> (1048575, 11) %}
+{% print(bike.isnull().sum()) %}
 {% endraw %}
 {% endhighlight %}
 
