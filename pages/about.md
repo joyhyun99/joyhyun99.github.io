@@ -23,8 +23,6 @@ tags: [About, Archive]
 
 
 
-<br><br>
-
 <p>Greetings! Thank you for your warm visitation.</p>
 
 <p>My name is Cho Uihyun, a sophomore studying at Yonsei University</p>
