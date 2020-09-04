@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The Rise of Machine Learning: Perceptron Learning Algorithm and its fallacies
-feature-img: assets/img/pexels/triangular.jpeg
-thumbnail: "assets/img/perceptron_image.jpg"
-tags: [deep-learning, perceptron, Adaline, personal-review]
+title: Rise of Machine Learning: Perceptron algorithms and its fallacies
+feature-img: "assets/img/pexels/desk-messy.jpeg"
+thumbnail: "assets/thumbnails/pexels/desk-messy.jpeg"
+tags: [beginning]
 author: joey99
 excerpt_separator: <!--more-->
 ---
