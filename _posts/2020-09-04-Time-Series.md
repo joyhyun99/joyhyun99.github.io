@@ -3,7 +3,7 @@ layout: post
 title: Applications of Time Series analysis from public bike usage records
 feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: "assets/img/bike.jpg"
-tags: [data-science, time-series, ARIMA]
+tags: [data-science, time-series, ARIMA, personal-review]
 author: joey99
 excerpt_separator: <!--more-->
 ---
@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 <p> ARIMA model is also widely utilized to predict future values of the series by training forecast model. Today, we are going to understand and utilize the concept of ARIMA model in order to find out the mean velocity of individual public bikes across one month time period.</p>  
 <!--more-->
 
-## Preprocessing <!--more-->
+## Preprocessing 
 * TOC
 {:toc}
 
