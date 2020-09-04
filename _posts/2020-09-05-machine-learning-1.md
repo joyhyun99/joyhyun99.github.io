@@ -8,8 +8,8 @@ author: joey99
 excerpt_separator: <!--more-->
 ---
 
-<p> When we analyze time series statistically, an autoregressive integrated moving average model (ARIMA) can be used for the better understanding of the data. </p>
-<p> ARIMA model is also widely utilized to predict future values of the series by training forecast model. Today, we are going to understand and utilize the concept of ARIMA model in order to find out the mean velocity of individual public bikes across one month time period.</p>  
+<p> ㅁㄴㅇㄹ </p>
+<p> ㅁㄴㅇㄹ </p>  
 <!--more-->
 
 최초의 인공지능 알고리즘이 나오기 전, Dr. W.S. McCulloch와 Dr. Walter Pitts는 생물학적 뇌가 동작하는 방식을 이해하려는 시도로
@@ -23,10 +23,12 @@ MCP 뉴런은 정보를 전달했을 때 1, 정보를 전달하지 않았을 때
 이진 분류 작업을 수행하기 위해 퍼셉트론 알고리즘은 최적의 가중치 ω를 학습하고,
 이 가중치는 뉴런의 출력 신호를 낼지 말지를 결정하기 위해 입력 특성에 곱하는 계수이다.
 
-최적의 가중치 ω를 학습하는 알고리즘으로,
-이 가중치는 뉴런의 출력 신호를 낼지 말지를 결정하기 위해 입력 특성에 곱하는 계수입니다.
-퍼셉트론은 인공 뉴런 아이디어를 두 개의 클래스가 있는 이진 분류 작업으로 볼 수 있다.
-두 클래스는 간단하게 1(양성 클래스)과 -1(음성 클래스)로 나타낸다
+그 다음 입력 값 x와 이에 상응하는 가중치 벡터 w의 선형 조합으로 결정 함수 φ(z)를 정의한다.
+최종 입력(net input)인 z는 z = w1x1 + ... + wmxm = wTx 이고, 
+특정 샘플 xi의 최종 입력이 사전에 정의된 임계값 θ보다 크면 클래스 1로 예측하고, 그렇지 않으면 클래스 -1로 예측한다.
+
+η = 학습률. yi는 i번째 훈련 샘플의 진짜 클래스 레이블. yhati는 예측 클래스 레이블.
+퍼셉트론은 모든 가중치 wj를 업데이트하기 전에 yhati를 다시 계산하지 않느다.
 
  학습률 eta와 에포크 횟수(훈련 데이터를 반복하는 횟수) n_iter로 새로운 Perceptron 객체를 초기화한다
  fit 메서드에서 self.w_ 가중치를 벡터 Rm+1로 초기화한다
