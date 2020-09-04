@@ -24,6 +24,7 @@ tags: [About, Archive]
 
 <p>Greetings! Thank you for your warm visitation.</p>
 
+
 <p>My name is Cho Uihyun, a sophomore studying at Yonsei University</p>
 
 <p>majoring in investigating social events through data analysis</p>
@@ -54,7 +55,6 @@ tags: [About, Archive]
 
 <p> Data Crawling, Data Analysis, Deep Learning, Scikit-learn, Tensorflow, NLP </p>
 
-<br>
 
 ## Contact me
 
