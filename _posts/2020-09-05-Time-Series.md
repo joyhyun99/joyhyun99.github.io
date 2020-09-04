@@ -62,6 +62,7 @@ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 �
 {% endhighlight %}
 
 ![model.result]({{ "/assets/img/2020-09-24-ARIMA-model-result.PNG" | relative_url }})
+
 ![model.graph]({{ "/assets/img/arima2.png.PNG" | relative_url }})
 
 {% highlight ruby %}
@@ -74,3 +75,4 @@ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 �
 {% endhighlight %}
 
 {% include aligner.html images="2020-09-24-ARIMA-model_12_1.png" %}
+{% include aligner.html images="arima4.png" %}
