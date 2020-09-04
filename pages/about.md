@@ -23,7 +23,7 @@ tags: [About, Archive]
 
 
 
-<p> </p>
+<br><br>
 
 <p>Greetings! Thank you for your warm visitation.</p>
 
@@ -41,14 +41,14 @@ tags: [About, Archive]
 
 <p>Have a nice day and most importantly, have fun :D</p>
 
-<p> </p>
+<br><br>
 
 
 
 ---------------------------
-## My field of programming languages
+<br><br>
 
-<p> </p>
+## My field of programming languages
 
 <p> * Data analysis : Pycharm, R, Google Colab but mostly jupyter notebook </p>
 
@@ -56,13 +56,19 @@ tags: [About, Archive]
 
 <p> * Android Programming : java </p>
 
+<br><br>
+
 ### Research Field
+
 
 <p> Data Crawling, Data Analysis, Deep Learning, Scikit-learn, Tensorflow, NLP </p>
 
 <br>
 
+<br><br>
+
 ## Personal Experience
+
 
 <div id="jb-sidebar">
 	<p> 2020.3 ~ </p>
@@ -76,9 +82,9 @@ tags: [About, Archive]
     <p> Graduated Seoul High school </p>
 </div>
 
-<br><br><br><br><br>
-
 ## Projects
+
+<br><br><br><br><br>
 
 <div id="jb-sidebar">
 	<p>2017.01 ~ 2017.12</p>
