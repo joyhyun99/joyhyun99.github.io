@@ -4,6 +4,7 @@ url: "joyhyun99.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: joey99                                    # site's title
+subtitle                 : "Data science, Deep learning learner's repository" # site tagline that appears below site title in masthead
 description: "Data science, Deep learning learner's repository"      # used by search engines
 avatar: assets/img/iconw.jpeg                     # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
