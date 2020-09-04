@@ -1,6 +1,7 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://joey99.github.io"
+repository: "joyhyun99/joey99.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: joey99                                    # site's title
