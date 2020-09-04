@@ -3,7 +3,7 @@ layout: post
 title: The Rise of Machine Learning: Perceptron Learning Algorithm and its fallacies
 feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: assets/img/perceptron_image.jpg
-tags: [data-science]
+tags: [data science]
 author: joey99
 excerpt_separator: <!--more-->
 ---
