@@ -72,7 +72,7 @@ tags: [About, Archive]
     <p> Graduated Seoul High school </p>
 </div>
 
-<br><br><br><br><br>
+<br><br><br>
 
 <div id="jb-sidebar">
     <p>2019.12 ~ 2020.1</p>
