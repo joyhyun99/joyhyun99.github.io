@@ -75,4 +75,7 @@ Yt = α1Yt-1 + α2Yt-2 + β1εt-1 + β2εt-2 + εt 학습 데이터의 예측 �
 {% endhighlight %}
 
 {% include aligner.html images="2020-09-24-ARIMA-model_12_1.png" %}
+
+모델이 20일 후 예측한 값.
+
 {% include aligner.html images="arima4.png" %}
