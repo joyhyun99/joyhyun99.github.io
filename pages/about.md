@@ -17,19 +17,29 @@ tags: [About, Archive]
 }
 </style>
 
-# Using Kramdown GFM <!--more-->
+## Introduction <!--more-->
 * TOC
 {:toc}
 
 <center>
 
-<p>안녕하세요, 저는 현재 연세대학교에서 공부하고 있는 조의현 이라고 합니다.</p>
+<p></p>
 
-<p>제 블로그에 방문해 주셔서 감사합니다.</p>
+<p>Greetings! Thank you for your warm visitation.</p>
 
-<p>이 블로그는 제가 개인 또는 연구실 프로젝트를 하면서 어려웠던 점을 기록으로 남기거나</p>
+<p>My name is Cho Uihyun, a sophomore studying at Yonsei University</p>
 
-<p>제가 공부한 내용을 기초적인 내용부터 어려운 학문적인 내용들까지 정리하려는 목적으로 개설하였습니다.</p>
+<p>majoring in investigating social events through data analysis</p>
+
+<p>and predicting outcomes with deep learning algorithms.</p>
+
+<p>I plan to record what I have learned about data science and deep learning.</p>
+
+<p>for us (:D) who are deeply interested in the field of statistics</p>
+
+<p>and hand out projects I have worked on to everyone who are interested.</p>
+
+<p>Have a nice day and most importantly, have fun :D</p>
 
 </center>
 
