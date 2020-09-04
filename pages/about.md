@@ -21,9 +21,9 @@ tags: [About, Archive]
 * TOC
 {:toc}
 
-<center>
 
-<p></p>
+
+<p> </p>
 
 <p>Greetings! Thank you for your warm visitation.</p>
 
@@ -41,48 +41,45 @@ tags: [About, Archive]
 
 <p>Have a nice day and most importantly, have fun :D</p>
 
-</center>
+<p> </p>
+
+
 
 ---------------------------
-## Basic Usage
+## My field of programming languages
 
-<h3>1. Skills</h3>
+<p> </p>
 
- <p class="text"> * Program Language : Python, Tensorflow, Java, Go</p>
+<p> * Data analysis : Pycharm, R, Google Colab but mostly jupyter notebook </p>
 
- <p class="text"> * Database : MongoDB, MySQL</p>
+<p> * Deep learning : R, jupyter notebook</p>
 
- <p class="text"> * ETC : GitLab, Mac OS</p>
+<p> * Android Programming : java </p>
 
-# Using toc.js
+### Research Field
 
-<br>
-<h3>2. Interest</h3>
-
-
-   <p class="text"> Data Mining, Machine Learning, Deep Learning, NLP </p>
+<p> Data Crawling, Data Analysis, Deep Learning, Scikit-learn, Tensorflow, NLP </p>
 
 <br>
 
-## Customize with toc.js
-
-<h3>3. Experience</h3>
+## Personal Experience
 
 <div id="jb-sidebar">
-	<p>2015.12 ~ 현재</p>
-    <p>2014.03</p>
+	<p> 2020.3 ~ </p>
+	<p> 2019.3 ~ 2020.3</p>
+    <p>2019.3</p>
 </div>
 
 <div id="jb-content">
-    <p>세종대학교 지능형 시스템 연구실 학부생 연구원</p>
-    <p>세종대학교 입학</p>
+    <p> Sophomore year at Yonsei University </p>		
+    <p> Freshman year at Yonsei University </p>
+    <p> Graduated Seoul High school </p>
 </div>
 
 <br><br><br><br><br>
 
-### Use with this jekyll template
+## Projects
 
-<h3>4. Project</h3>
 <div id="jb-sidebar">
 	<p>2017.01 ~ 2017.12</p>
 	<br>
@@ -95,7 +92,6 @@ tags: [About, Archive]
     <p>2015.09 ~ 2015.12</p>
 </div>
 
-## Basic Usage
 
 <div id="jb-content">
     <p>산학연 중기청 과제 참여<br>
