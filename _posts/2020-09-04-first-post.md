@@ -5,12 +5,14 @@ feature-img: "assets/img/pexels/desk-messy.jpeg"
 thumbnail: "assets/thumbnails/pexels/desk-messy.jpeg"
 tags: [beginning]
 author: joey99
+excerpt_separator: <!--more-->
 ---
 
 Hopefully you will find enough information about how to set images in your blog here.
 This is an example of a post which includes a feature image specified in the front matter of the post. 
 The feature image spans the full-width of the page, and is shown with the title on permalink pages:
 
+<!--more-->
 ```yaml
 feature-img: "assets/img/pexels/desk-messy.jpeg"
 thumbnail: "assets/img/thumbnails/desk-messy.jpeg" 
