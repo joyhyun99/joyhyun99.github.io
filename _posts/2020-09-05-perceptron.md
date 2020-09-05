@@ -8,18 +8,24 @@ author: joey99
 excerpt_separator: <!--more-->
 ---
 
-<p> 최초의 인공지능 알고리즘 퍼셉트론은 기계가 스스로 주어진 데이터를 가지고 가중치를 학습해 두 개의 클라스로 분류하는 이진 분류 알고리즘으로 수동적인 computing 수용자였던 기계에서 능동적으로 사고하는 기계로의 첫 걸음이라고 많은 기대를 받았다</p>
-<p> 하지만, 빅데이터를 다룰 때 적은 선형적 데이터만 다룰 수 있는 한계가 명확히 드러났고 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델도 이 문제를 해결하지 못했다. </p>  
+<p> 최초의 인공지능 알고리즘 퍼셉트론은 기계가 스스로 주어진 데이터를 가지고 가중치를 학습해 두 개의 클라스로 분류하는 이진 분류 알고리즘이다. </p>
+<p> 퍼셉트론은 수동적인 computing 수용자였던 기계에서 능동적으로 사고하는 기계로의 첫 걸음이라고 많은 기대를 받았지만, 방대한 데이터를 다루는 상황을 고려했을 때 적은 선형적 데이터만 다룰 수 있었던 퍼셉트론 한계가 명확히 드러났고 퍼셉트론의 문제점을 개선한 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델도 방대한 데이터를 다루지 못했다. </p>  
+
 <!--more-->
 
-최초의 인공지능 알고리즘이 나오기 전, Dr. W.S. McCulloch와 Dr. Walter Pitts는 생물학적 뇌가 동작하는 방식을 이해하려는 시도로
+최초의 인공지능 알고리즘이 나오기 전, Dr. W.S. McCulloch와 Dr. Walter Pitts는 생물학적 뇌가 동작하는 방식을 이해위해
 뇌의 신경 세포를 이진 출력을 내는 간단한 논리 회로로 표현한 MCP 뉴런을 창안해내었다.
-이의 원리는 간단하다. 신경세포가 정보를 받아들이는 수상 돌기에 여러 신호가 도착하면, 그 정보들이 세포체에서 합쳐지게 되는데,
-이 합쳐진 신호가 특정 임계값을 넘으면 다음 신경세포로 정보를 전달하고 그러지 않으면 전달하지 않는다.
-MCP 뉴런은 정보를 전달했을 때 1, 정보를 전달하지 않았을 때 -1을 설정한 간단한 이진 출력 모델이다.
+MCP 뉴런의 원리는 간단하다. 신경세포가 정보를 받아들이는 수상 돌기에 여러 신호가 도착하면, 그 정보들이 세포체에서 합쳐지게 되는데,
+이 합쳐진 신호가 특정 임계값을 넘으면 1의 값을 부여해 다음 신경세포로 정보를 전달하고,
+특정 임계값을 넘지 못하면 -1의 값을 부여해 다음 신경세포로 정보를 전달허자 않는다.
 
 최초의 인공지능 알고리즘인 퍼셉트론도 MCP 뉴런과 마찬가지로  데이터를 -1와 -1 두 개의 클래스로 분류하는 이진 분류 작업이다.
-기계가 스스로 주어진 데이터를 가지고 양성 클래스 1, 그리고 음성 클래스 -1 이진 분류 작업을 수행하기 위해 
+퍼셉트론은 0보다 작은 실수에 대해서 0, 0보다 큰 실수에 대해서 1의 값을 부여하는 단위 계단 함수를 약간 변형하여
+최종 입력 z가 0보다 작으면 -1, 0보다 크면은 1의 값을 부여하는 결정 함수 φ(z) 를 정의한다.
+
+![6]({{ "/assets/img/perceptrongraph.png" | relative_url }})
+
+퍼셉트론은 기계가 스스로 주어진 데이터를 가지고 양성 클래스 1, 그리고 음성 클래스 -1 이진 분류 작업을 수행하기 위해 
 최적의 가중치 ω를 학습하고, 이 가중치는 뉴런의 출력 신호를 낼지 말지를 결정하기 위해 입력 특성에 곱하는 계수이다.
 
 퍼셉트론의 가중치를 학습하기 전, 가중치를 0 또는 랜덤한 작은 값으로 초기화 해준다.
@@ -35,13 +41,16 @@ update = self.eta * (target - self.predict(xi))
 self.w_[1:] += update * xi
 self.w_[0] += update
 
+![5]({{ "/assets/img/perceptron_algo.jpeg" | relative_url }})
+
+
 η = 학습률. yi는 i번째 훈련 샘플의 진짜 클래스 레이블. yhati는 예측 클래스 레이블.
 퍼셉트론은 모든 가중치 wj를 업데이트하기 전에 yhati를 다시 계산하지 않는다.
 
- 학습률 eta와 에포크 횟수(훈련 데이터를 반복하는 횟수) n_iter로 새로운 Perceptron 객체를 초기화한다
- fit 메서드에서 self.w_ 가중치를 벡터 Rm+1로 초기화한다
- 여기서 m은 데이터셋에 있는 차원 개수이다
- self.w_[0]은 앞서 언급한 절편이다
+학습률 eta와 에포크 횟수(훈련 데이터를 반복하는 횟수) n_iter로 새로운 Perceptron 객체를 초기화한다
+fit 메서드에서 self.w_ 가중치를 벡터 Rm+1로 초기화한다
+여기서 m은 데이터셋에 있는 차원 개수이다
+self.w_[0]은 앞서 언급한 절편이다
 
 
 그 다음 입력 값 x와 이에 상응하는 가중치 벡터 w의 선형 조합으로 결정 함수 φ(z)를 정의한다.
@@ -55,7 +64,41 @@ np.where(self.net_input(X) >= 0.0, 1, -1)
 에포크마다 self.errors_ 리스트에 잘못 분류된 횟수를 기록한다. 나중에 훈련하는 동안 얼마나 퍼셉트론을 잘 수행했는지 분석할 수 있다
  
 퍼셉트론은 두 클래스가 선형적으로 구분되고 학습률이 충분히 작을 때만 수렴이 보장된다.
- 
+
+{% highlight ruby %}
+{% raw %}
+{% def vectorize_sequences(sequences, dimension = 10000): %}
+{% train_data = vectorize_sequences(train_data) %}
+{% train_data = np.where(train_data == 1, 1, -1) %}
+{% train_labels = np.asarray(train_labels).astype('float32') %}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight ruby %}
+{% raw %}
+{% train_data.shape -> (25000, 10000) %}
+{% train_labels.shape 0> (25000, ) %}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight ruby %}
+{% raw %}
+{% ppn = Perceptron(eta=0.01, n_iter=40) %}
+{% ppn.fit(train_data, train_labels) %}
+{% endraw %}
+{% endhighlight %}
+
+![4]({{ "/assets/img/perceptron.png" | relative_url }})
+
+{% highlight ruby %}
+{% raw %}
+{% y_pred = ppn.predict(test_data) %}
+{% print('Perceptron Algorithm Learning Reports') %}
+{% Number of samples incorrectly classified : 20581 %}
+{% Accuracy = 17.68% (Total sample size = 25000) %}
+{% endraw %}
+{% endhighlight %}
+
 적응형 선형 뉴런 Adaline
 아달린은 연속 함수로 비용 함수를 정의하고 최소화하는 핵심 개념
 가중치를 업데이트하는 데 퍼셉트론처럼 단위 계단 함수 대신 선형 활성화 함수를 사용
@@ -90,11 +133,7 @@ X.T.dot(errors)는 특성 행렬과 오차 벡터간의 행렬-벡터 곱셈이�
  
 ![3]({{ "/assets/img/adalinegraph.png" | relative_url }})
  
-![4]({{ "/assets/img/perceptron.png" | relative_url }})
- 
-![5]({{ "/assets/img/perceptron_algo.jpeg" | relative_url }})
- 
-![6]({{ "/assets/img/perceptrongraph.png" | relative_url }})
+
  
  
  
