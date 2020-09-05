@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Rise of Machine Learning: Perceptron Learning Algorithms and its fallacies"
+title: "The Rise of Machine Learning: Perceptron Learning Algorithms and its Fallacies"
 feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: "assets/img/perceptron_image.jpg"
 tags: [deep-learning, perceptron, Adaline, personal-review]
@@ -83,8 +83,18 @@ zi는 정수 클래스 레이블이 아니라 실수
 X.T.dot(errors)는 특성 행렬과 오차 벡터간의 행렬-벡터 곱셈이다
  
 이 코드의 activation 메서드는 단순한 항등 함수(identity function)이기 때문에 아무런 영향을 미치지 않는다
+
+![1]({{ "/assets/img/adaline.png" | relative_url }})
  
+![2]({{ "/assets/img/adaline_algo.png" | relative_url }})
  
+![3]({{ "/assets/img/adalinegraph.png" | relative_url }})
+ 
+![4]({{ "/assets/img/perceptron.png" | relative_url }})
+ 
+![5]({{ "/assets/img/perceptron_algo.jpeg" | relative_url }})
+ 
+![6]({{ "/assets/img/perceptrongraph.png" | relative_url }})
  
  
  
