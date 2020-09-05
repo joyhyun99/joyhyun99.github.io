@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Rise of Machine Learning: Perceptron Learning Algorithm and its fallacies"
+title: "The Rise of Machine Learning: Perceptron Learning Algorithms and its fallacies"
 feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: "assets/img/perceptron_image.jpg"
 tags: [deep-learning, perceptron, Adaline, personal-review]
@@ -8,8 +8,8 @@ author: joey99
 excerpt_separator: <!--more-->
 ---
 
-<p> ㅁㄴㅇㄹ </p>
-<p> ㅁㄴㅇㄹ </p>  
+<p> 최초의 인공지능 알고리즘 퍼셉트론은 기계가 스스로 주어진 데이터를 가지고 가중치를 학습해 두 개의 클라스로 분류하는 이진 분류 알고리즘으로 수동적인 computing 수용자였던 기계에서 능동적으로 사고하는 기계로의 첫 걸음이라고 많은 기대를 받았다</p>
+<p> 하지만, 빅데이터를 다룰 때 적은 선형적 데이터만 다룰 수 있는 한계가 명확히 드러났고 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델도 이 문제를 해결하지 못했다. </p>  
 <!--more-->
 
 최초의 인공지능 알고리즘이 나오기 전, Dr. W.S. McCulloch와 Dr. Walter Pitts는 생물학적 뇌가 동작하는 방식을 이해하려는 시도로
