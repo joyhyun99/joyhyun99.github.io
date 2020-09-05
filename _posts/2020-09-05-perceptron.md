@@ -27,10 +27,10 @@ excerpt_separator: <!--more-->
 
 $$ z = w1x1 + w2x2 +...+ wnxn = wTx $$
 
-퍼셉트론의 가중치를 학습하기 전, 가중치를 0 또는 랜덤한 작은 값으로 초기화 해준다.
-가중치를 0으로 초기화하지 않는 이유는 가중치가 0이 아니어야 학습률 η(eta)가 분류 결과에 영향을 주기 때문인데,
-가중치가 0으로 초기화되어 있다면 학습률 파라미터 eta는 가중치 벡터의 방향이 아니라 크기에만 영향을 미치기 때문이다.
-Perceptron class에서는 표준편차가 0.01인 정규분포에서 뽑은 랜덤한 작은 수를 뽑는 것으로 구현이 되어 있다.
+<p> Before training the weight of algorithm, initialize the first weight to random minimal number. </p>
+<p> The reason why the first weight is not initialized into zero is because the learning rate of algorithm η(eta) can only affect classification process when the first weight is not zero. </p>
+<p> If the first weight is initialized to zero, the parameter η would only affect scalar value, not the vector direction of the weight </p>
+<p> This feature is implemented in the Perceptron class to choose a random small number from a normal distribution with standard deviation of 0.01 </p>
 
 {% highlight ruby %}
 {% raw %}
