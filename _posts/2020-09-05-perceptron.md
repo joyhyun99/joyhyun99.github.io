@@ -8,8 +8,9 @@ author: joey99
 excerpt_separator: <!--more-->
 ---
 
-<p> 최초의 인공지능 알고리즘 퍼셉트론은 기계가 주어진 데이터를 가지고 스스로 가중치를 학습해 두 개의 클래스로 분류하는 이진 분류 알고리즘이다. </p>
-<p> 퍼셉트론은 수동적인 computing 수용자였던 기계에서 능동적으로 사고하는 기계로의 첫 걸음이라 많은 기대를 받았지만, 방대한 데이터를 다루는 상황을 고려했을 때 적은 선형적 데이터만 다룰 수 있었던 알고리즘의 한계가 명확히 드러났고 퍼셉트론의 문제점을 개선한 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델도 방대한 데이터를 다루지는 못했다. </p>  
+
+<p> Perceptron Learning Algorithm is among the first prototypes of Artificial Intelligence trained to obtain the optimum weight in order to classify binary datas solely by its own. </p>
+<p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, perceptron's problems were clearly revealed and the accuracy had fallen to a point where it could not be utilized. </p>  
 
 <!--more-->
 
