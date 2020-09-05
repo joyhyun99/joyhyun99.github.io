@@ -10,24 +10,22 @@ excerpt_separator: <!--more-->
 
 
 <p> Perceptron Learning Algorithm is among the first prototypes of Artificial Intelligence trained to obtain the optimum weight in order to classify binary datas solely by its own. </p>
-<p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, perceptron's problems were clearly revealed and the accuracy had fallen to a point where it could not be utilized. </p>  
+<p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, Perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, Perceptron algorithm's accuracy had fallen to a point where it could not be utilized. </p>  
 
 <!--more-->
 
 <p> Just before the era of Artificial Intelligence, Dr. W.S. McCulloch and Dr. Walter Pitts came up with simple logical circuit that produces binary outputs to express how biological transmission of data works in our nerve cells.</p>
+<p> MCP neural network's principles are simple. When multiple different signals arrive at the dendrite where our nerve cells accept information, these signals are merged to produce a single big signal. If the combined signal exceeds a certain threshold, the MCP hands over a positive one value to next MCP. And when the combined signal does not exceed a certain threshold, the MCP does not hand over signal, thus a negative one value is produced. </p>
 
-<p> MCP neural network's principles are simple. When multiple different signals arrive at the dendrite where our nerve cells accept information, these signals are merged to produce a single big signal. If the combined signal exceeds a certain threshold, the MCP hands over a positive one value to next MCP. And when the combined signal does not exceed a certain threshold, the MCP hands over a negative one value to text MCP. </p>
-
-최초의 인공지능 알고리즘인 퍼셉트론도 MCP 뉴런과 마찬가지로 데이터를 -1와 1 두 개의 클래스로 분류하는 이진 분류 작업이다.
-퍼셉트론은 0보다 작은 실수에 대해서 0, 0보다 큰 실수에 대해서 1의 값을 부여하는 단위 계단 함수를 약간 변형하여
-최종 입력 z가 사전에 정의된 임계값 θ보다 크면 클래스 1로 예측하고, 그렇지 않으면 클래스 -1로 예측하는 결정 함수 φ(z) 를 정의한다.
+<p> Like MCP neural network, Perceptron learning algorithm classifies binary datas into positive one value and negative one value.</p>
+<p> Perceptron employs a slightly modified version of unit step function. Unit step function assigns number zero to values less than zero, and assigns number one to values more than zero. Perceptron's net input also assigns number one to input greater than the predifined threshold. However, if not, it assigns number negative one for those datas </p>
 
 ![6]({{ "/assets/img/perceptrongraph.png" | relative_url }})
 
-퍼셉트론은 이렇게 주어진 데이터를 가지고 스스로 양성 클래스 1, 그리고 음성 클래스 -1으로 분류하는 이진 분류 작업을 수행하기 위해 
-샘플의 최적가중치 ω를 학습하고, 이 가중치는 뉴런의 출력 신호를 낼지 말지를 결정하기 위해 입력 특성에 곱하는 계수이다.
-다시 말해 최종 입력 z는 z = w1x1 + w2x2 +...+ wnxn = wTx으로 정의할 수 있고,
-z 가 0보다 작으면 음성 클래스로 분류하고 0보다 크면 양성 클래스로 분류한다.
+<p> In order to classify binary datas, Perceptron algorithm trains to obtain the obtimum weight of the sample, and this factor is multiplied with input datas to determine whether to hand over a signal or not to. </p>
+<p> In other words, the net input of the function z can be defined into the function below and if net input is less than zero, the data is classified into the negative class and if not, the data is classified into the positive class.</p>
+
+$$ z = w1x1 + w2x2 +...+ wnxn = wTx $$
 
 퍼셉트론의 가중치를 학습하기 전, 가중치를 0 또는 랜덤한 작은 값으로 초기화 해준다.
 가중치를 0으로 초기화하지 않는 이유는 가중치가 0이 아니어야 학습률 η(eta)가 분류 결과에 영향을 주기 때문인데,
