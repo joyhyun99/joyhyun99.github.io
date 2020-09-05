@@ -55,7 +55,7 @@ for xi, target in zip(X, y):
 
 <p> Perceptron Algorithm does not recalculate the predicted values before updating all weights of the data. Take sample x as input and connect it with weight w to calculate a predicted error. Then updated the weight using the predicted error and repeat the process to obtain the optimum weight. Therefore, we can simply the Perceptron Algorithm learning process to the diagram listed below </p>
 
-![8]({{ "/assets/img/perceptron_algo.png" | relative_url }})
+![8]({{ "/assets/img/perceptron_algo.jpeg" | relative_url }})
 
 ### Classifying via Trained Algorithm
 
