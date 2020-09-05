@@ -8,12 +8,17 @@ author: joey99
 excerpt_separator: <!--more-->
 ---
 
+## Introduction to Perceptron Algorithm
+* TOC
+{:toc}
 
 <p> Perceptron Learning Algorithm is among the first prototypes of Artificial Intelligence trained to obtain the optimum weight in order to classify binary datas solely by its own. </p>
 <p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, Perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, Perceptron algorithm's accuracy had fallen to a point where it could not be utilized. </p>  
 
 <!--more-->
-![0]({{ "/assets/img/perceptron_image.jpg" | relative_url }})
+{% include aligner.html images="perceptron_image.jpg" %}
+
+### Perceptron's Classification Method
 
 <p> Just before the era of Artificial Intelligence, Dr. W.S. McCulloch and Dr. Walter Pitts came up with simple logical circuit that produces binary outputs to express how biological transmission of data works in our nerve cells.</p>
 <p> MCP neural network's principles are simple. When multiple different signals arrive at the dendrite where our nerve cells accept information, these signals are merged to produce a single big signal. If the combined signal exceeds a certain threshold, the MCP hands over a positive one value to next MCP. And when the combined signal does not exceed a certain threshold, the MCP does not hand over signal, thus a negative one value is produced. </p>
@@ -23,14 +28,14 @@ excerpt_separator: <!--more-->
 
 ![6]({{ "/assets/img/perceptrongraph.png" | relative_url }})
 
-<br>
+## Perceptron Learning Process
 
 <p> In order to classify binary datas, Perceptron algorithm trains to obtain the obtimum weight of the sample, and this factor is multiplied with input datas to determine whether to hand over a signal or not to. </p>
 <p> In other words, the net input of the function z can be defined into the function below and if net input is less than zero, the data is classified into the negative class and if not, the data is classified into the positive class.</p>
 
 $$ z = w1x1 + w2x2 +...+ wnxn = wTx $$
 
-<br>
+### Importance of Initializing First Weight
 
 <p> Before training the weight of algorithm, initialize the first weight to random minimal number. </p>
 <p> The reason why the first weight is not initialized into zero is because the learning rate of algorithm η(eta) can only affect classification process when the first weight is not zero. </p>
@@ -46,13 +51,13 @@ for xi, target in zip(X, y):
 {% endraw %}
 {% endhighlight %}
 
-<br>
+### Perceptron Algorithm Diagram
 
 <p> Perceptron Algorithm does not recalculate the predicted values before updating all weights of the data. Take sample x as input and connect it with weight w to calculate a predicted error. Then updated the weight using the predicted error and repeat the process to obtain the optimum weight. Therefore, we can simply the Perceptron Algorithm learning process to the diagram listed below </p>
 
 ![8]({{ "/assets/img/perceptron_algo.png" | relative_url }})
 
-<br>
+### Classifying via Trained Algorithm
 
 <p> After training Perceptron Algorithm, the algorithm can determine weight for each sample self.w_[1], and the intercept of the equation self.w_[0]. Now, to complete the classification process, define the decision function φ(z) by a linear combination of input value x and corresponding weight value w. If the net input is greater than the predifined threshold θ, predict class 1. Otherwise, predict class -1/ </p>
 
@@ -63,6 +68,7 @@ np.where(self.net_input(X) >= 0.0, 1, -1)
 {% endraw %}
 {% endhighlight %}
 
+## Real life Application - is the algorithm useful nowadays?
 
 IMDB 데이터셋
 
@@ -102,3 +108,7 @@ IMDB 데이터셋
 {% Accuracy = 17.68% (Total sample size = 25000) %}
 {% endraw %}
 {% endhighlight %}
+
+## Conclusion
+
+퍼셉트론의 문제점을 개선한 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델을 살펴보고 이 문제를 해결할 수 있는지 보겠음.
