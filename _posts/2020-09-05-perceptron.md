@@ -68,12 +68,12 @@ np.where(self.net_input(X) >= 0.0, 1, -1)
 {% endraw %}
 {% endhighlight %}
 
-## Real life Application - is the algorithm useful nowadays?
+## Real life Application - Is The Perceptron Algorithm Useful Nowadays?
 
-IMDB 데이터셋
+### From IMDB Dataset
 
-인터넷 영화 데이터베이스로부터 가져온 양극단의 리뷰 50,000개로 이루어진 IMDB 데이터셋을 사용하겠습니다. 이 데이터셋은 훈련 데이터 25,000개와 테스트 데이터 25,000개로 나뉘어 있고 각각 50%는 부정, 50%는 긍정 리뷰로 구성되어 있습니다.
-이 데이터는 전처리되어 있어 각 리뷰(단어 시퀀스)가 숫자 시퀀스로 변환되어 있습니다. 여기서 각 숫자는 사전에 있는 고유한 단어를 나타냅니다.
+<p> In this real life application process, we are going to utilize IMDB dataset from the Internet Movie DataBase with 50,000 labeled movie reviews, 50% of reviews are positive and the others are negative reviews.</p>
+<p> I ahve already seperated train data with test data. But since the train data is currently inappropriate for proper analysis, first finish the preprocessing, and then vectorize the sequence to vastly increase the quality of original data.</p>
 
 {% highlight ruby %}
 {% raw %}
@@ -91,6 +91,11 @@ IMDB 데이터셋
 {% endraw %}
 {% endhighlight %}
 
+### Algorithm Training Results
+
+<p> Perceptron Algorithm ensures convergence only when the two classes are linearly seperated and the learning rate and data size is small enough. </p>
+<p> When analyzing a vast data full of 25,000 training sets and 25,000 test sets with not-so linearly seperated data since it is directly converted from individual movie reviews into vectorized sequences, the Perceptron Algorithm does not operate what it is meant to be and produce low-quality report that can not be utilized in any situations. </p>
+
 {% highlight ruby %}
 {% raw %}
 {% ppn = Perceptron(eta=0.01, n_iter=40) %}
@@ -100,15 +105,12 @@ IMDB 데이터셋
 
 ![4]({{ "/assets/img/perceptron.png" | relative_url }})
 
-{% highlight ruby %}
-{% raw %}
-{% y_pred = ppn.predict(test_data) %}
-{% print('Perceptron Algorithm Learning Reports') %}
-{% Number of samples incorrectly classified : 20581 %}
-{% Accuracy = 17.68% (Total sample size = 25000) %}
-{% endraw %}
-{% endhighlight %}
+>  - Perceptron Algorithm Learning Reports
+>  - Number of samples incorrectly classified : 20581
+>  - Accuracy = 17.68% (Total sample size = 25000)
 
 ## Conclusion
 
-퍼셉트론의 문제점을 개선한 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델을 살펴보고 이 문제를 해결할 수 있는지 보겠음.
+<p> Perceptron is the first manmade artifical intelligence algorithm created and has produced the best binary classification in various situations, but its chronic problems have not been fixed thus it is not widely used nowadays since other algorithms simply perform better. </p>
+<p> Next time, we will analyze the improved version of Perceptron, Adaline model, which calculates the error of the model by examining real data with linear activation function to update the weight. See ya! :D </p>
+
