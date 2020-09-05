@@ -14,11 +14,9 @@ excerpt_separator: <!--more-->
 
 <!--more-->
 
-인공지능 알고리즘이 나오기 전, Dr. W.S. McCulloch와 Dr. Walter Pitts는 생물학적 뇌가 동작하는 방식을 이해하기 위해
-뇌의 신경 세포를 이진 출력을 내는 간단한 논리 회로로 표현한 MCP 뉴런을 창안해내었다.
-MCP 뉴런의 원리는 간단하다. 신경세포가 정보를 받아들이는 수상 돌기에 여러 신호가 도착하면, 그 정보들이 세포체에서 합쳐지게 되는데,
-이 합쳐진 신호가 특정 임계값을 넘으면 1의 값을 부여해 다음 신경세포로 정보를 전달하고,
-특정 임계값을 넘지 못하면 -1의 값을 부여해 다음 신경세포로 정보를 전달하지 않는다.
+<p> Just before the era of Artificial Intelligence, Dr. W.S. McCulloch and Dr. Walter Pitts came up with simple logical circuit that produces binary outputs to express how biological transmission of data works in our nerve cells.</p>
+
+<p> MCP neural network's principles are simple. When multiple different signals arrive at the dendrite where our nerve cells accept information, these signals are merged to produce a single big signal. If the combined signal exceeds a certain threshold, the MCP hands over a positive one value to next MCP. And when the combined signal does not exceed a certain threshold, the MCP hands over a negative one value to text MCP. </p>
 
 최초의 인공지능 알고리즘인 퍼셉트론도 MCP 뉴런과 마찬가지로 데이터를 -1와 1 두 개의 클래스로 분류하는 이진 분류 작업이다.
 퍼셉트론은 0보다 작은 실수에 대해서 0, 0보다 큰 실수에 대해서 1의 값을 부여하는 단위 계단 함수를 약간 변형하여
@@ -148,6 +146,8 @@ zi는 정수 클래스 레이블이 아니라 실수
 X.T.dot(errors)는 특성 행렬과 오차 벡터간의 행렬-벡터 곱셈이다
  
 이 코드의 activation 메서드는 단순한 항등 함수(identity function)이기 때문에 아무런 영향을 미치지 않는다
+
+퍼셉트론의 문제점을 개선한 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델도 방대한 데이터를 다루지는 못했다.
 
 ![1]({{ "/assets/img/adaline.png" | relative_url }})
  
