@@ -50,28 +50,19 @@ for xi, target in zip(X, y):
 
 <p> Perceptron Algorithm does not recalculate the predicted values before updating all weights of the data. Take sample x as input and connect it with weight w to calculate a predicted error. Then updated the weight using the predicted error and repeat the process to obtain the optimum weight. Therefore, we can simply the Perceptron Algorithm learning process to the diagram listed below </p>
 
-![6]({{ "/assets/img/perceptron_algo.png" | relative_url }})
+![8]({{ "/assets/img/perceptron_algo.png" | relative_url }})
 
-self.w_[0]은 앞서 언급한 절편이다
-self.w_[1]은 각 샘플마다 가중치다
-그 다음 입력 값 x와 이에 상응하는 가중치 벡터 w의 선형 조합으로 결정 함수 φ(z)를 정의한다.
+<br>
+
+<p> After training Perceptron Algorithm, the algorithm can determine weight for each sample self.w_[1], and the intercept of the equation self.w_[0]. Now, to complete the classification process, define the decision function φ(z) by a linear combination of input value x and corresponding weight value w. If the net input is greater than the predifined threshold θ, predict class 1. Otherwise, predict class -1/ </p>
 
 {% highlight ruby %}
 {% raw %}
 np.dot(X, self.w_[1:]) + self.w_[0]
-{% endraw %}
-{% endhighlight %}
-
-특정 샘플 xi의 최종 입력이 사전에 정의된 임계값 θ보다 크면 클래스 1로 예측하고, 그렇지 않으면 클래스 -1로 예측한다.
-
-{% highlight ruby %}
-{% raw %}
 np.where(self.net_input(X) >= 0.0, 1, -1)
 {% endraw %}
 {% endhighlight %}
- 
- 
-퍼셉트론은 두 클래스가 선형적으로 구분되고 학습률이 충분히 작을 때만 수렴이 보장된다.
+
 
 IMDB 데이터셋
 
@@ -111,51 +102,3 @@ IMDB 데이터셋
 {% Accuracy = 17.68% (Total sample size = 25000) %}
 {% endraw %}
 {% endhighlight %}
-
-적응형 선형 뉴런 Adaline
-아달린은 연속 함수로 비용 함수를 정의하고 최소화하는 핵심 개념
-가중치를 업데이트하는 데 퍼셉트론처럼 단위 계단 함수 대신 선형 활성화 함수를 사용
-아달린에서 선형 활성화 함수 φ(z)는 최종 입력과 동일한 함수
-φ(wTx) = wTx
-선형 활성화 함수가 가중치 학습에 사용되지만 최종 예측을 만드는 데 여전히 임계 함수를 사용. 
-아달린 알고리즘은 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트
-
-지도학습 알고리즘의 핵심 구성 요소는 학습 과정 동안 최적화하기 위해 정의한 목적 함수이다
-아달린은 계산된 출력과 진짜 클래스 레이블 사이의 제곱오차합으로 가중치를 학습할 비용 함수 J를 정의한다
-
-함수 J
-
-경사 하강법을 사용하면 비용함수 J(w)의 그래디언트 ΔJ(w) 반대 방향으로 조금씩 가중치를 업데이트
-가중치 변화량 w은 음수의 그래디언트에 학습률 eta를 곱한 것으로 정의
-비용 함수의 그래디언트를 계산하려면 각 가중치 wj에 대한 편도 함수를 계산
-가중치 wj의 업데이트 공식
- 
-zi는 정수 클래스 레이블이 아니라 실수
-훈련 세트에 있는 모든 샘플을 기반으로 가중치 업데이트를 계산한다. 이 방식을 배치 경사 하강법 (batch gradient dexcent)이라고도 한다
- 
- 
-퍼셉트론처럼 개별 훈련 샘플마다 평가한 후 가중치를 업데이트하지 않고 전체 훈련 데이터셋을 기반으로 그래디언트를 계산
-절편(0번째 가중치)은 self.eta * errors.sum()이고 가중치 1에서 m까지는 self.eta * X.T.dot(errors이다
-X.T.dot(errors)는 특성 행렬과 오차 벡터간의 행렬-벡터 곱셈이다
- 
-이 코드의 activation 메서드는 단순한 항등 함수(identity function)이기 때문에 아무런 영향을 미치지 않는다
-
-퍼셉트론의 문제점을 개선한 각 훈련 샘플마다 진짜 클래스 레이블과 선형 활성화 함수의 실수 출력 값을 비교하여 모델의 오차를 계산하고 가중치를 업데이트하는 Adaline 모델도 방대한 데이터를 다루지는 못했다.
-
-![1]({{ "/assets/img/adaline.png" | relative_url }})
- 
-![2]({{ "/assets/img/adaline_algo.png" | relative_url }})
- 
-![3]({{ "/assets/img/adalinegraph.png" | relative_url }})
- 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
