@@ -5,22 +5,19 @@ feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: "assets/img/perceptron_image.jpg"
 tags: [deep-learning, perceptron, Adaline, personal-review]
 author: joey99
-excerpt_separator:
+excerpt_separator: <!--more-->
 ---
 
-## Introduction to Perceptron Algorithm
-* TOC
-{:toc}
-
-<!--more-->
 <p> Perceptron Learning Algorithm is among the first prototypes of Artificial Intelligence trained to obtain the optimum weight in order to classify binary datas solely by its own. </p>
-
 <!--more-->
 <p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, Perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, Perceptron algorithm's accuracy had fallen to a point where it could not be utilized. </p>  
 
 {% include aligner.html images="perceptron_image.jpg" %}
 
-### Perceptron's Classification Method
+## Introduction to Perceptron Algorithm
+* TOC
+{:toc}
+
 
 <p> Just before the era of Artificial Intelligence, Dr. W.S. McCulloch and Dr. Walter Pitts came up with simple logical circuit that produces binary outputs to express how biological transmission of data works in our nerve cells.</p>
 <p> MCP neural network's principles are simple. When multiple different signals arrive at the dendrite where our nerve cells accept information, these signals are merged to produce a single big signal. If the combined signal exceeds a certain threshold, the MCP hands over a positive one value to next MCP. And when the combined signal does not exceed a certain threshold, the MCP does not hand over signal, thus a negative one value is produced. </p>
