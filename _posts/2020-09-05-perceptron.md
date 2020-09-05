@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 <p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, Perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, Perceptron algorithm's accuracy had fallen to a point where it could not be utilized. </p>  
 
 <!--more-->
-<br>
+![0]({{ "/assets/img/perceptron_image.jpg" | relative_url }})
 
 <p> Just before the era of Artificial Intelligence, Dr. W.S. McCulloch and Dr. Walter Pitts came up with simple logical circuit that produces binary outputs to express how biological transmission of data works in our nerve cells.</p>
 <p> MCP neural network's principles are simple. When multiple different signals arrive at the dendrite where our nerve cells accept information, these signals are merged to produce a single big signal. If the combined signal exceeds a certain threshold, the MCP hands over a positive one value to next MCP. And when the combined signal does not exceed a certain threshold, the MCP does not hand over signal, thus a negative one value is produced. </p>
@@ -36,34 +36,24 @@ $$ z = w1x1 + w2x2 +...+ wnxn = wTx $$
 <p> The reason why the first weight is not initialized into zero is because the learning rate of algorithm η(eta) can only affect classification process when the first weight is not zero. </p>
 <p> If the first weight is initialized to zero, the parameter η would only affect scalar value, not the vector direction of the weight </p>
 <p> This feature is implemented in the Perceptron class to choose a random small number from a normal distribution with standard deviation of 0.01 </p>
+<p> Then, calcuate the predicted values from each train data xi, and update individual weight by multiplying learning rate with difference between predicted values and actual values. </p>
 
 {% highlight ruby %}
 {% raw %}
 self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + X.shape[1])
-{% endraw %}
-{% endhighlight %}
-
-
-그 다음에 각 훈련 샘플 xi에서 출력 값 yhat을 계산하고 가중치를 업데이트한다
-η = 학습률. yi는 i번째 훈련 샘플의 진짜 클래스 레이블. yhati는 예측 클래스 레이블.
-퍼셉트론은 모든 가중치 wj를 업데이트하기 전에 yhati를 다시 계산하지 않는다
-
-{% highlight ruby %}
-{% raw %}
 for xi, target in zip(X, y):
-update = self.eta * (target - self.predict(xi))
-self.w_[1:] += update * xi
-self.w_[0] += update
+   update = self.eta * (target - self.predict(xi))
 {% endraw %}
 {% endhighlight %}
 
-![5]({{ "/assets/img/perceptron_algo.jpeg" | relative_url }})
+<br>
 
-학습률 eta와 에포크 횟수(훈련 데이터를 반복하는 횟수) n_iter로 새로운 Perceptron 객체를 초기화한다
-fit 메서드에서 self.w_ 가중치를 벡터 Rm+1로 초기화한다
-여기서 m은 데이터셋에 있는 차원 개수이다
+<p> Perceptron Algorithm does not recalculate the predicted values before updating all weights of the data. Take sample x as input and connect it with weight w to calculate a predicted error. Then updated the weight using the predicted error and repeat the process to obtain the optimum weight. Therefore, we can simply the Perceptron Algorithm learning process to the diagram listed below </p>
+
+![6]({{ "/assets/img/perceptron_algo.png" | relative_url }})
+
 self.w_[0]은 앞서 언급한 절편이다
-
+self.w_[1]은 각 샘플마다 가중치다
 그 다음 입력 값 x와 이에 상응하는 가중치 벡터 w의 선형 조합으로 결정 함수 φ(z)를 정의한다.
 
 {% highlight ruby %}
