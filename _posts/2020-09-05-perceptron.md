@@ -5,17 +5,19 @@ feature-img: assets/img/pexels/triangular.jpeg
 thumbnail: "assets/img/perceptron_image.jpg"
 tags: [deep-learning, perceptron, Adaline, personal-review]
 author: joey99
-excerpt_separator: <!--more-->
+excerpt_separator:
 ---
 
 ## Introduction to Perceptron Algorithm
 * TOC
 {:toc}
 
+<!--more-->
 <p> Perceptron Learning Algorithm is among the first prototypes of Artificial Intelligence trained to obtain the optimum weight in order to classify binary datas solely by its own. </p>
-<p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, Perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, Perceptron algorithm's accuracy had fallen to a point where it could not be utilized. </p>  
 
 <!--more-->
+<p> Perceptron was highly aspired in the 60s since it was the first step for a passive computing machine to actively utilize self-trained algorithms to analyze given datas. However, Perceptron algorithm was limited to only handle small linear data with high accuracy. So when given huge and vast amount of datas, Perceptron algorithm's accuracy had fallen to a point where it could not be utilized. </p>  
+
 {% include aligner.html images="perceptron_image.jpg" %}
 
 ### Perceptron's Classification Method
